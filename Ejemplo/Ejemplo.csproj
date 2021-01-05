@@ -2894,6 +2894,7 @@
     <Content Include="View\Trabajador\BuscarTrabajador.aspx" />
     <Content Include="View\Trabajador\RegistrarT.aspx" />
     <Content Include="View\Trabajador\RegistrarTrabajador.aspx" />
+    <Content Include="View\Trabajador\xxx.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
