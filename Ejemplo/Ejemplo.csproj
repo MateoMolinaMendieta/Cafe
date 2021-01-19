@@ -832,6 +832,7 @@
     <Content Include="View\Insumo\BuscarInsumo.aspx" />
     <Content Include="View\Insumo\RegistrarI.aspx" />
     <Content Include="View\Insumo\RegistrarInsumo.aspx" />
+    <Content Include="View\Lote\RegistrarLote.aspx" />
     <Content Include="View\Menu\Menu.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2900,6 +2901,7 @@
     <Compile Include="conexion\BdComun.cs" />
     <Compile Include="conexion\Parameter.cs" />
     <Compile Include="conexion\Transaction.cs" />
+    <Compile Include="Controller\LoteController.cs" />
     <Compile Include="Controller\CultivoController.cs" />
     <Compile Include="Controller\TrabajadorController.cs" />
     <Compile Include="Controller\InsumoController.cs" />
@@ -2978,6 +2980,13 @@
     </Compile>
     <Compile Include="View\Insumo\RegistrarInsumo.aspx.designer.cs">
       <DependentUpon>RegistrarInsumo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lote\RegistrarLote.aspx.cs">
+      <DependentUpon>RegistrarLote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Lote\RegistrarLote.aspx.designer.cs">
+      <DependentUpon>RegistrarLote.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Menu\Menu.Master.cs">
       <DependentUpon>Menu.Master</DependentUpon>
