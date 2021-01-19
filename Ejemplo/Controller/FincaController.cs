@@ -44,6 +44,10 @@ namespace Ejemplo.Controllers
         {
             return fn.MostrarFinca(a);
         }
+        public bool EliminarFinca(string id)
+        {
+            return fn.EliminarFinca(id);
+        }
 
         //public DataTable ConsultarCuenta()
         //{

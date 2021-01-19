@@ -12,6 +12,10 @@
                     var div = document.getElementById("DivModal2");
                     div.style.display = 'block';
                     break;
+                case "3":
+                    var div = document.getElementById("DivModal3");
+                    div.style.display = 'block';
+                    break;
             }
         }
         function Close(opc) {
@@ -22,6 +26,10 @@
                     break;
                 case "2":
                     var div = document.getElementById("DivModal2");
+                    div.style.display = 'none';
+                    break;
+                case "3":
+                    var div = document.getElementById("DivModal3");
                     div.style.display = 'none';
                     break;
             }
@@ -62,9 +70,26 @@
                                                 data-popup="tooltip"
                                                 title="Modificar Finca"
                                                 CssClass="fa fa-save pr-1"
-                                                CommandArgument='<%#Eval("idFinca")+","+Eval("Nombre")+","+Eval("Ubicacion")+","+Eval("areaa")+","+Eval("fk_idpersona")%>'
+                                                CommandArgument='<%#Eval("idFinca")+","+Eval("Nombre")+","+Eval("Ubicacion")+","+Eval("areaa")%>'
                                                 OnCommand="LinkButton1_Command"> Modificar
                                             </asp:LinkButton>
+
+
+                                        <asp:LinkButton ID="LinkButton2"
+                                            runat="server"
+                                            data-popup="tooltip"
+                                            title="Eliminar Finca"
+                                            CssClass="fa fa-times pr-1"
+                                            CommandArgument='<%#Eval("idFinca")+","+Eval("Nombre")%>'
+                                            OnCommand="linkbuton2_Command"> Eliminar
+
+                                        </asp:LinkButton>
+
+
+
+
+
+
                                         </li>
                                 </div>
                             </div>
@@ -268,7 +293,7 @@
                                <%--<asp:TextBox ID="TPersona" runat="server" CssClass="form-control  col-md-6 offset-md-3"></asp:TextBox>--%>
                             <%--</div>--%>
 
-                               <div class="row form-group">
+                               <%--<div class="row form-group">
                                 <div class="col col-md-2">
                                     <label for="text-input" class=" form-control-label">Persona:</label>
                                 </div>
@@ -276,7 +301,7 @@
                                     <asp:TextBox ID="TPersona" ReadOnly="false" runat="server" CssClass="form-control">
                                     </asp:TextBox>
                                 </div>
-                              </div>
+                              </div>--%>
                            <br>
 
                              <div class="modal-footer"" >
@@ -297,7 +322,63 @@
             <div class="modal-backdrop fade show"></div>
         </div>
 
+          <div id="DivModal3" style="display: none">
+            <div class="modal fade show" id="mediumM3" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" style="display: block; padding-left: 0px;">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background: #28a745">
+                            <h5 class="modal-title col-11 text-center" id="mediumModalL3">DATOS DE LA FINCA</h5>
+                            <button type="button" class="close" data-dismiss="modal" onclick="Close('3')" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
 
+
+
+                            <div class="row form-group">
+                                <div class="col col-md-2">
+                                    <label for="text-input" class=" form-control-label">Matrícula Inmobiliaria :</label>
+                                </div>
+                                <div class="col-11 col-md-9">
+                                    <asp:TextBox ID="idfincaE" ReadOnly="true" runat="server" CssClass="form-control">
+                                    </asp:TextBox>
+                                </div>
+                            </div>
+                            <br>
+
+
+
+                            <div class="row form-group">
+                                <div class="col col-md-2">
+                                    <label for="text-input" class=" form-control-label">Nombre:</label>
+                                </div>
+                                <div class="col-11 col-md-9">
+                                    <asp:TextBox ID="nombreE" ReadOnly="false" runat="server" CssClass="form-control">
+                                    </asp:TextBox>
+                                </div>
+                            </div>
+
+                            <br>
+
+
+                            <br>
+
+                            <div class="modal-footer">
+
+                                <div class="col-11 col-md-8">
+                                    <asp:LinkButton ID="LinkButton4" CssClass="btn btn-primary btn-success  mt-4" runat="server" OnClick="LinkButton4_Click"><i class="fa fa-edit"></i>&nbsp;Eliminar</asp:LinkButton>
+                                    <asp:LinkButton ID="LinkButton5" BackColor="#0889D3" CssClass="btn btn-secondary btn-round mt-4" runat="server"><i class="fa fa-times"></i>&nbsp;Cerrar</asp:LinkButton>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-backdrop fade show"></div>
+        </div>
 
     </form>
 

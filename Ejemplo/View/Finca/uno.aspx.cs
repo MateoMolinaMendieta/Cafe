@@ -68,7 +68,7 @@ namespace Ejemplo.View.Finca
             TB_Nombre.Text = Argument[1];
             TUbicacion.Text = Argument[2];
             TArea.Text = Argument[3];
-            TPersona.Text = Argument[4];
+            
             
             ScriptManager.RegisterStartupScript(this.Page, GetType(), "alertss", "Open('2')", true);
         }
@@ -77,7 +77,7 @@ namespace Ejemplo.View.Finca
         {
             try
             {
-                FincaController fn = new FincaController(IdF.Text, TB_Nombre.Text, TUbicacion.Text, TArea.Text, TPersona.Text);
+                FincaController fn = new FincaController(IdF.Text, TB_Nombre.Text, TUbicacion.Text, TArea.Text,null);
                 if (fn.ModificarF(fn.fn))
                 {
 
@@ -99,5 +99,35 @@ namespace Ejemplo.View.Finca
 
         
     }
+
+        protected void linkbuton2_Command(object sender, CommandEventArgs e)
+        {
+            var Argument = e.CommandArgument.ToString().Split(',');
+
+            idfincaE.Text = Argument[0];
+            nombreE.Text = Argument[1];
+
+            ScriptManager.RegisterStartupScript(this.Page, GetType(), "alertss", "Open('3')", true);
+        }
+
+        protected void LinkButton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FincaController fn = new FincaController(idfincaE.Text, nombreE.Text, null, null, null);
+                if (fn.EliminarFinca(idfincaE.Text))
+                {
+                    Response.Redirect("~/View/Finca/uno.aspx");
+                }
+                else
+                {
+                    Response.Redirect("~/View/Finca/uno.aspx");
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
     }
     }
