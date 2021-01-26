@@ -40,13 +40,13 @@ namespace Ejemplo.View.Lote {
         protected global::System.Web.UI.HtmlControls.HtmlInputText tamano;
         
         /// <summary>
-        /// Control finca.
+        /// Control drl_finca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText finca;
+        protected global::System.Web.UI.WebControls.DropDownList drl_finca;
         
         /// <summary>
         /// Control Button1.

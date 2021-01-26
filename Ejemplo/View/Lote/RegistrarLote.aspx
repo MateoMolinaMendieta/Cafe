@@ -27,7 +27,8 @@
                  
                      <div class="form-group">
                         <label for="nf-password" class=" form-control-label">Finca</label>
-                        <input runat="server" type="text" id="finca" name="ubicaiones" class="form-control col-lg-12">
+                         <asp:DropDownList runat="server" ID="drl_finca" AppendDataBoundItems="false" CssClass="form-control" >
+                    </asp:DropDownList>
                     </div>
                 </div>
                 <%--<<%--div class="card-footer">

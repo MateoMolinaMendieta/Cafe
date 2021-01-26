@@ -48,6 +48,10 @@ namespace Ejemplo.Controllers
         {
             return fn.EliminarFinca(id);
         }
+        public DataTable ConsultarFincaLote(string a)
+        {
+            return fn.BuscarFincaLote(a);
+        }
 
         //public DataTable ConsultarCuenta()
         //{

@@ -53,6 +53,12 @@ namespace Ejemplo.Models
             sql[0] = @"Delete from finca where idFinca='" + idfin + "';";
             return conn.RealizarTransaccion(sql);
         }
+
+        public DataTable BuscarFincaLote(string fkpersona)
+        {
+            string sql = @"SELECT finca.idFinca,finca.Nombre FROM finca INNER JOIN persona ON finca.fk_idpersona=persona.idPersona WHERE persona.idPersona='" + fkpersona + "';";
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
     }
 }
       
